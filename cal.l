@@ -4,7 +4,7 @@
 
 %}
 
-digit[0-9]*
+digit [0-9]*
 
 %%
 {digit} {yylval.value = atoi(yytext);return num;}
@@ -13,10 +13,11 @@ digit[0-9]*
 "-" {return '-';}
 "*" {return '*';}
 "/" {return '/';}
+\n  {return '\n';}
 
 %%
 
-int yywrap()
+int yywrap(void)
 {
 	return 0;
 }

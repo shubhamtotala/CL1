@@ -45,22 +45,36 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    num = 258
+    NUM = 258,
+    SIN = 259,
+    COS = 260,
+    TAN = 261,
+    SQRT = 262,
+    SQ = 263,
+    CUBE = 264,
+    LOG = 265
   };
 #endif
 /* Tokens.  */
-#define num 258
+#define NUM 258
+#define SIN 259
+#define COS 260
+#define TAN 261
+#define SQRT 262
+#define SQ 263
+#define CUBE 264
+#define LOG 265
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 
 union YYSTYPE
 {
-#line 6 "cal.y" /* yacc.c:1909  */
+#line 11 "one.y" /* yacc.c:1909  */
 
-	int value;
+	float value;
 
-#line 64 "y.tab.h" /* yacc.c:1909  */
+#line 78 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;
