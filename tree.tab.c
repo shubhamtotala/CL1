@@ -76,7 +76,7 @@ typedef struct node
 
 #define YYSTYPE struct node*
 
-#line 80 "y.tab.c" /* yacc.c:339  */
+#line 80 "tree.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -95,9 +95,9 @@ typedef struct node
 #endif
 
 /* In a future release of Bison, this section will be replaced
-   by #include "y.tab.h".  */
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+   by #include "tree.tab.h".  */
+#ifndef YY_YY_TREE_TAB_H_INCLUDED
+# define YY_YY_TREE_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -114,8 +114,6 @@ extern int yydebug;
     id = 258
   };
 #endif
-/* Tokens.  */
-#define id 258
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -126,7 +124,7 @@ union YYSTYPE
 
   char val;
 
-#line 130 "y.tab.c" /* yacc.c:355  */
+#line 128 "tree.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -139,11 +137,11 @@ extern YYSTYPE yylval;
 
 int yyparse (void);
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#endif /* !YY_YY_TREE_TAB_H_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 147 "y.tab.c" /* yacc.c:358  */
+#line 145 "tree.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1213,47 +1211,47 @@ yyreduce:
         case 2:
 #line 26 "tree.y" /* yacc.c:1646  */
     {printtree((yyvsp[-1].value));}
-#line 1217 "y.tab.c" /* yacc.c:1646  */
+#line 1215 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 28 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (*mknode)('+',(yyvsp[-2].value),(yyvsp[0].value));}
-#line 1223 "y.tab.c" /* yacc.c:1646  */
+#line 1221 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 29 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[0].value);}
-#line 1229 "y.tab.c" /* yacc.c:1646  */
+#line 1227 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 31 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (*mknode)('*',(yyvsp[-2].value),(yyvsp[0].value));}
-#line 1235 "y.tab.c" /* yacc.c:1646  */
+#line 1233 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 32 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[0].value);}
-#line 1241 "y.tab.c" /* yacc.c:1646  */
+#line 1239 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 34 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (*mkleaf)((yyvsp[0].value));}
-#line 1247 "y.tab.c" /* yacc.c:1646  */
+#line 1245 "tree.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 35 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[-1].value);}
-#line 1253 "y.tab.c" /* yacc.c:1646  */
+#line 1251 "tree.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1257 "y.tab.c" /* yacc.c:1646  */
+#line 1255 "tree.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
