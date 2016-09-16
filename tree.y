@@ -9,7 +9,6 @@ typedef struct node
 }node;
 
 
-#define YYSTYPE struct node*
 %}
 %union
 {
@@ -25,13 +24,13 @@ typedef struct node
 %%
 S : E '\n' {printtree($1);}
   ;
-E : E '+' E  {$$ = (*mknode)('+',$1,$3);}
+E : E '+' E  {$$ = mknode('+',$1,$3);}
   | T    {$$ = $1;}
   ;
-T : T '*' F  {$$ = (*mknode)('*',$1,$3);}
+T : T '*' F  {$$ = mknode('*',$1,$3);}
   | F    {$$ = $1;}
   ; 
-F : id {$$ = (*mkleaf)($1);}
+F : id {$$ = mkleaf($1);}
   | '('E')'    {$$ = $2;}
   ;  
 %%

@@ -74,9 +74,8 @@ typedef struct node
 }node;
 
 
-#define YYSTYPE struct node*
 
-#line 80 "y.tab.c" /* yacc.c:339  */
+#line 79 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -122,11 +121,11 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 15 "tree.y" /* yacc.c:355  */
+#line 14 "tree.y" /* yacc.c:355  */
 
   char val;
 
-#line 130 "y.tab.c" /* yacc.c:355  */
+#line 129 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -143,7 +142,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 147 "y.tab.c" /* yacc.c:358  */
+#line 146 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -440,7 +439,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    26,    26,    28,    29,    31,    32,    34,    35
+       0,    25,    25,    27,    28,    30,    31,    33,    34
 };
 #endif
 
@@ -1211,49 +1210,49 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 26 "tree.y" /* yacc.c:1646  */
+#line 25 "tree.y" /* yacc.c:1646  */
     {printtree((yyvsp[-1].value));}
-#line 1217 "y.tab.c" /* yacc.c:1646  */
+#line 1216 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 28 "tree.y" /* yacc.c:1646  */
-    {(yyval.value) = (*mknode)('+',(yyvsp[-2].value),(yyvsp[0].value));}
-#line 1223 "y.tab.c" /* yacc.c:1646  */
+#line 27 "tree.y" /* yacc.c:1646  */
+    {(yyval.value) = mknode('+',(yyvsp[-2].value),(yyvsp[0].value));}
+#line 1222 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 29 "tree.y" /* yacc.c:1646  */
+#line 28 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[0].value);}
-#line 1229 "y.tab.c" /* yacc.c:1646  */
+#line 1228 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 31 "tree.y" /* yacc.c:1646  */
-    {(yyval.value) = (*mknode)('*',(yyvsp[-2].value),(yyvsp[0].value));}
-#line 1235 "y.tab.c" /* yacc.c:1646  */
+#line 30 "tree.y" /* yacc.c:1646  */
+    {(yyval.value) = mknode('*',(yyvsp[-2].value),(yyvsp[0].value));}
+#line 1234 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 32 "tree.y" /* yacc.c:1646  */
+#line 31 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[0].value);}
-#line 1241 "y.tab.c" /* yacc.c:1646  */
+#line 1240 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 34 "tree.y" /* yacc.c:1646  */
-    {(yyval.value) = (*mkleaf)((yyvsp[0].value));}
-#line 1247 "y.tab.c" /* yacc.c:1646  */
+#line 33 "tree.y" /* yacc.c:1646  */
+    {(yyval.value) = mkleaf((yyvsp[0].value));}
+#line 1246 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 35 "tree.y" /* yacc.c:1646  */
+#line 34 "tree.y" /* yacc.c:1646  */
     {(yyval.value) = (yyvsp[-1].value);}
-#line 1253 "y.tab.c" /* yacc.c:1646  */
+#line 1252 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1257 "y.tab.c" /* yacc.c:1646  */
+#line 1256 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1481,7 +1480,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 37 "tree.y" /* yacc.c:1906  */
+#line 36 "tree.y" /* yacc.c:1906  */
 
 
 int main (void) 
