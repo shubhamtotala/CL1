@@ -1,0 +1,83 @@
+----------------------------------------------------------------
+lex file
+----------------------------------------------------------------
+%{
+#include "y.tab.h"
+#include<math.h>
+%}
+digit [a-z]*
+
+%%
+{digit}	{yylval.value=yytext[0]; return ID;}
+"+" {return '+';}
+"=" {return '=';}
+"-" {return '-';}
+"*" {return '*';}
+"/" {return '/';}
+\n {return '\n';}
+
+%%
+int yywrap()
+{
+	return 1;
+}
+----------------------------------------------------------------
+yacc file
+----------------------------------------------------------------
+%{
+	#include<stdio.h>
+	#include<math.h>
+	char temp ='A';
+	
+%}
+%union
+{
+	char value;
+	
+}
+%token '+' '\n' '='
+%token <value> ID
+%type <value> S
+%type <value> E
+%left '+' '-' '*' '/'
+%%
+
+S:ID'='E'\n' {printf("\n %c = %c\n",$1,$3); return 0; }
+ ;
+E:E'+'E {$$ = temp; temp++; printf("\n %c = %c + %c",$$,$1,$3);}
+ |E'/'E {$$ = temp; temp++; printf("\n %c = %c / %c",$$,$1,$3);}
+ |E'*'E {$$ = temp; temp++; printf("\n %c = %c * %c",$$,$1,$3);}
+ |E'-'E {$$ = temp; temp++; printf("\n %c = %c - %c",$$,$1,$3);}
+ |ID {$$=$1;}
+ ;
+
+%%
+int main()
+{	
+	printf("Enter the Expression & Press Enter : ");
+	yyparse();
+	
+}
+
+void yyerror(char *msg)
+{
+	printf("\n error: %s", msg);
+}
+----------------------------------------------------------------
+output
+----------------------------------------------------------------
+swl-09@Comp-SWL-09:~/BE48$ lex lex2.l
+swl-09@Comp-SWL-09:~/BE48$ yacc -d yacc2.y
+swl-09@Comp-SWL-09:~/BE48$ cc lex.yy.c y.tab.c -ll -ly
+swl-09@Comp-SWL-09:~/BE48$ ./a.out
+Enter the Expression & Press Enter : a=a*b+c-d/e
+
+ A = a * b
+ B = A + c
+ C = B - d
+ D = C / e
+ a = D
+swl-09@Comp-SWL-09:~/BE48$ 
+
+
+

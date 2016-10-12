@@ -1,0 +1,90 @@
+
+#include	 is preprocessor
+<	 is a special character
+stdio.h	 is headerfile
+>	 is a special character 
+
+	is Escape sequences
+#include	 is preprocessor
+<	 is a special character
+conio.h	 is headerfile
+>	 is a special character
+
+	is Escape sequences
+/* starting 
+of 
+main function
+*/	is a multiline comment
+
+	is Escape sequences
+void	 is keywords 
+main	is variable
+(	 is a special character
+)	 is a special character 
+//starting of main	is a single line comment
+
+	is Escape sequences
+{	 is a special character
+
+	is Escape sequences
+int	 is keywords 
+a	is variable
+,	 is a special character
+b	is variable
+,	 is a special character
+c	is variable
+;	 is a special character
+
+	is Escape sequences
+printf	is a function
+(	 is a special character
+"enter the first num"	is a string constant
+)	 is a special character
+;	 is a special character  
+
+	is Escape sequences
+scanf	is a function
+(	 is a special character
+"%d"	is a string constant
+,	 is a special character&
+a	is variable
+)	 is a special character
+;	 is a special character
+
+	is Escape sequences
+printf	is a function
+(	 is a special character
+"enter the first num"	is a string constant
+)	 is a special character
+;	 is a special character
+
+	is Escape sequences
+scanf	is a function
+(	 is a special character
+"%d"	is a string constant
+,	 is a special character&
+b	is variable
+)	 is a special character
+;	 is a special character
+
+	is Escape sequences
+c	is variable
+=	is a relational operator
+a	is variable
++	is a arithmatic operator
+b	is variable
+;	 is a special character
+
+	is Escape sequences
+printf	is a function
+(	 is a special character
+"addition of two number is"	is a string constant
+,	 is a special character
+c	is variable
+)	 is a special character
+;	 is a special character
+
+	is Escape sequences
+}	 is a special character
+
+	is Escape sequences

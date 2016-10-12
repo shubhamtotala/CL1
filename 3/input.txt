@@ -1,0 +1,16 @@
+#include<stdio.h> 
+#include<conio.h>
+/* starting 
+of 
+main function
+*/
+void main() //starting of main
+{
+int a,b,c;
+printf("enter the first num");  
+scanf("%d",&a);
+printf("enter the first num");
+scanf("%d",&b);
+c=a+b;
+printf("addition of two number is",c);
+}
